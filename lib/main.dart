@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   static List<Widget> _pageList = [
     CustomPage(pannelColor: Colors.cyan, title: 'Home'),
     CustomPage(pannelColor: Colors.green, title: 'MyPage'),
-    CustomPage(pannelColor: Colors.red, title: 'Settings')
+    CustomPage(pannelColor: Colors.redAccent, title: 'Settings')
   ];
 
   void _onItemTapped(int index) {
@@ -78,8 +78,8 @@ class CustomPage extends StatelessWidget {
     return Container(
       child: Center(
         child: Container(
-          width: 100,
-          height: 100,
+          width: 200,
+          height: 200,
           decoration: BoxDecoration(
               color: pannelColor,
               borderRadius: BorderRadius.all(Radius.circular(20.0))),
