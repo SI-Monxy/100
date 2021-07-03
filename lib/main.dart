@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   static List<Widget> _pageList = [
     CustomPage(pannelColor: Colors.cyan, title: 'Home'),
     CustomPage(pannelColor: Colors.green, title: 'MyPage'),
-    CustomPage(pannelColor: Colors.pink, title: 'Settings')
+    CustomPage(pannelColor: Colors.red, title: 'Settings')
   ];
 
   void _onItemTapped(int index) {
