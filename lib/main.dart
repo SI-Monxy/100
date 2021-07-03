@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  static const String _title = 'Flutter Code Sample';
+  static const String _title = '100';
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,15 @@ class _HomePageState extends State<HomePage> {
   // 表示する Widget の一覧
   static List<Widget> _pageList = [
     CustomPage(pannelColor: Colors.cyan, title: 'Home'),
-    CustomPage(pannelColor: Colors.green, title: 'Settings'),
-    CustomPage(pannelColor: Colors.pink, title: 'Search')
+    CustomPage(pannelColor: Colors.green, title: 'MyPage'),
+    CustomPage(pannelColor: Colors.pink, title: 'Settings')
   ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,11 +59,12 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-
+        onTap: _onItemTapped,
       ),
     );
   }
 }
+
 
 class CustomPage extends StatelessWidget {
   final Color pannelColor;
@@ -71,8 +78,8 @@ class CustomPage extends StatelessWidget {
     return Container(
       child: Center(
         child: Container(
-          width: 200,
-          height: 200,
+          width: 100,
+          height: 100,
           decoration: BoxDecoration(
               color: pannelColor,
               borderRadius: BorderRadius.all(Radius.circular(20.0))),
