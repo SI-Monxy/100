@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:one_hundred/presentation/home/home_page.dart';
+import 'package:one_hundred/presentation/my/my_page.dart';
 import 'package:one_hundred/presentation/top/top_model.dart';
 import 'package:provider/provider.dart';
 
